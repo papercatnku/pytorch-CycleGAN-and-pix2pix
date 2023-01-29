@@ -1,1 +1,5 @@
-CUDA_VISIBLE_DEVICES=1 python train.py --dataroot /media/112new_sde/CommonDatasets/sketchlize --name sketch_pix2pix --model pix2pix --direction AtoB --num_threads 4 --batch_size 8 --crop_size 256 --input_nc 1 --output_nc 1 --dataset_mode sketch --lr 1e-2 --preprocess crop --netD pixel --serial_batches
+# CUDA_VISIBLE_DEVICES=1 python train.py --dataroot /media/112new_sde/CommonDatasets/sketchlize --name sketch_pix2pix --model pix2pix --direction AtoB --num_threads 4 --batch_size 8 --crop_size 256 --input_nc 1 --output_nc 1 --dataset_mode sketch --lr 1e-2 --preprocess crop --netD pixel --serial_batches
+
+# CUDA_VISIBLE_DEVICES=1 python train.py --dataroot /media/112new_sde/CommonDatasets/sketchlize --name sketch_pix2pix --model pix2pix --direction AtoB --num_threads 4 --batch_size 8 --crop_size 256 --input_nc 1 --output_nc 1 --dataset_mode sketch --lr 1e-2 --preprocess crop --serial_batches --norm instance --netG unet_256 --netD pixel 
+
+CUDA_VISIBLE_DEVICES=1 python train.py --dataroot /media/112new_sde/CommonDatasets/sketchlize --name sketch_pix2pix_instance_resnet--model pix2pix --direction AtoB --num_threads 4 --batch_size 8 --crop_size 256 --input_nc 1 --output_nc 1 --dataset_mode sketch --lr 1e-3 --preprocess crop --serial_batches --norm instance --netG resnet_9blocks --netD pixel 
